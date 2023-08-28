@@ -1,2 +1,2 @@
-# pythontutor
+# Python Tutor
 Python Tutorial
