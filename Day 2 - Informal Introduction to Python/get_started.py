@@ -2,28 +2,84 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
+
+st.sidebar.title('Day 2: Getting Started :balloon:')
+
 image = Image.open("/Users/raahool/applications/github/pythontutor/static/pythonlogo.png")
-st.sidebar.image(image, caption='Welcome To Codelocked')
+st.sidebar.image(image, caption='Welcome To Codelocked', width=150)
 st.sidebar.info("""
                 Today's Topic
+                - Summary Till now 
                 - Using the Python Interpreter
                 - An Informal Introduction to Python
                 - More Control Flow Tools
                 """)
 
-st.title('Day 2: Get Started Using the Python Interpreter :balloon:')
 
-pages_name = ["Interpreter", "An Informal Introduction to Python",
+pages_name = ["Till now","Interpreter", "An Informal Introduction to Python",
               "Using Python as a Calculator",
               "First Steps Towards Programming"]
 
-page = st.radio('Navigations', pages_name)
+page = st.sidebar.radio('Navigations', pages_name)
 
-if page == 'Interpreter':
-    st.subheader("The Python Interpreter [/usr/local/bin/python3.11]")
-    st.markdown(
+if page == "Till now":
+    st.subheader("Features of Python")
+    st.success(
         """
-        - Interpreter operats somehow like `UNIX shell`
+        - Simple and easy to learn ***
+        - Freeware and OpenSource
+        - High Level programmer language
+        - Platform Independent
+        - Portable ***
+        - Dynamically Typed *** 
+        - Both Procedure oriented and Object oriented
+        - Interpreted 
+        - Extensible ***
+        - Embedded ***
+        - Extensive Library *****
+        """
+        )
+    
+    st.subheader("Limitation of Python")
+    st.info(
+        """
+        - Performance Wise 
+        - Mobile application
+        """
+    )
+
+    st.subheader("Myth")
+    st.error("Python is not suitable for Large scale enterprise applications")
+
+
+    st.subheader("Flavors of Python")
+    st.info(
+        """
+        - CPython
+        - Jython or JPython
+        - IronPython
+        - PyPy (Python for Speed) --> PVM --> JIT (Just In Time Compiler)
+        - RubyPython
+        - AnacondaPython 
+        """
+    )
+
+    st.image('https://cdn.ttgtmedia.com/rms/onlineimages/whatis-just_in_time_compiler-h.png')
+    
+    st.subheader("Python Versions")
+    st.info(
+        """
+        - 1.0 --> It almost dead, nobody talk about it
+        - 2.0 --> Stop support from last year
+        - 3.0 --> In todays' talk
+        """
+    )
+if page == 'Interpreter':
+    
+    st.subheader("The Python Interpreter")
+    st.info(
+        """
+        Interpreter operats somehow like `UNIX shell`
 
         - `python -c command [arg]`
 
@@ -42,12 +98,19 @@ if page == 'Interpreter':
 
     st.subheader("The Interpreter and Its Environment")
 
-    st.markdown(
+    st.info(
         """
         - By default Python source is treated as encoded in `UTF-8`
+        """
+    )
+    st.code(
+        """
+        # -*- coding: encoding -*-
+        # __author__: codelocked
 
-        `# -*- coding: encoding -*-`
-
+        def function_name():
+            ''' Bruce Lee Movie '''
+            return "Enter the New Dragon"
         """
     )
 
@@ -64,7 +127,7 @@ if page == "An Informal Introduction to Python":
     )
 
     st.text("Comment in Python # ")
-    st.markdown(
+    st.text(
         """
         - Single line Comments
         - Multiline Comments
@@ -91,77 +154,90 @@ if page == "An Informal Introduction to Python":
     )
 
 if page == "Using Python as a Calculator":
-    st.subheader("Numbers")
+    st.header("Numbers")
 
-    st.markdown(
+    st.error("""
+             Types of numbers available in python depends on which version of python you are using
+            """)
+    st.write("In Python 2.XX")
+    st.info(
         """
-        ### Types of numbers available in python depends on which version of python you are using
-        
-        IN python 2
-        ----------------
-        ##### Types of number: int, long, float, complex
-        ##### whole number: int, long
+        Types of number: int, long, float, complex
 
+        whole number: int, long
+        """
+    )
+    
+    st.write("In Python 3.XX")
+    st.info(
+        """
+        Types of number: int, float, complex
+        """
+    )
+    
+    st.code(
+        """
         import sys; sys.maxint
 
-        Int and Long automatically handle by Python
-
-        Float
-
-        Complex  i = sqrt(-1)        
+        # Int and Long automatically handle by Python
+        # Float
+        # Complex  i = sqrt(-1)        
                 
-        `z = 3 + 4.7j`
-         
-        `z.real`
+        z = 3 + 4.7j
                 
-        `z.imag`    
-
-        IN python 3
-        ----------------
-        ##### Types of number: int, float, complex
-                   
-        `import sys; sys.maxint`
-
+        print(z.real, z.imag) 
         """
     )
 
 
-    st.subheader("Text")
+    st.header("Text")
 
-    st.markdown(
+    st.info(
         """
          - In programming text represnted by strings
                    
         - Different ways in python to handle apostrope, quotation, long text with new lines
-                   
-        `message = "Codelocked tutorial"`       # Double quotes
-                   
-        `message2 = 'Another string for codelocked'     # Single quotes
-                   
-        `message = 'I'm in "codelocked" stuff'     # syntax error
+        """
+    )
+    st.code(
+        """
+        # Double quotes
+        message = "Codelocked tutorial"
 
-        `message = "I'm in stuff"  # Best way to treat single quotes as charater. No error no escape char
+        # Single quotes            
+        message2 = 'Another string for codelocked'    
                    
-        `movie_quote = '''There is no middle ground.
+        # syntax error
+        message = 'I'm in "codelocked" stuff'     
+
+        '''
+        Best way to treat single quotes as charater. 
+        No error and no escape char
+        '''
+        message = "I'm in stuff"  
+                   
+        movie_quote = '''
+        There is no middle ground.
         either you die like a hero
                    or live long enough'''`
 
-        `sanskrit_quotes = '''एकः क्षमावतां दोषो द्वतीयो नोपपद्यते। 
-                            यदेनं क्षमया युक्तमशक्तं मन्यते जनः ॥'''`
+        sanskrit_quotes = '''एकः क्षमावतां दोषो द्वतीयो नोपपद्यते। 
+                            यदेनं क्षमया युक्तमशक्तं मन्यते जनः ॥'''
         
-        So you can create strings with Single, double, tripple quotes  
         """
     )
 
-    st.subheader("List")
+    st.success("So you can create strings with Single, double, tripple quotes")
 
-    st.markdown(
+    st.header("List**")
+
+    st.info(
         """
-        - comma-separated values (items) between square brackets
+        Comma-separated values (items) between square brackets
 
-        - same type or different type items
+        Same type or different type items
 
-        - lists can be indexed and sliced
+        Lists can be indexed and sliced
 
         """
     )
