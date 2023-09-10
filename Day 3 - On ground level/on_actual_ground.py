@@ -44,18 +44,56 @@ if page == "Indentifiers":
         - No length limit
         """
     )
-    st.info(
+
+    st.subheader('Python - Magic or Dunder Methods')
+    st.markdown(
         """
-        _x      -->  indicated that Private variable
-        
-        __x     --> indicated that strongly private
-        
-        __x__   --> it is language specific special identifiers
+        |Python Specials|Description|
+        |------------|-------------|
+        |_x      |  indicated that Private variable|
+        |__x     | indicated that strongly private|
+        | \_\_x\_\_   | it is language specific special identifiers|
         
         e.g., __name__, __add__ and many more
         """
     )
+    st.code("print(dir(int))")
 
+    st.markdown(
+        """
+        |Method|Description|
+        |------|-----------|
+        |__new__() | returns a new object |
+        |__str__() | it is overridden to return a printable string representation of any user defined class|
+        |__add__() | addition of these two distance objects is desired to be performed using the overloading + operator.|
+
+        and Many more ....
+        """
+    )
+
+    st.info(
+
+        """
+        - In many programming language main() function to indicate the starting point of execution.
+        
+        - In python, as Interpreted langauge we dont need main().
+        The execution start from statement in program file
+
+        - Python include special variable called __name__ that contain the scope of code being executed as a string
+
+        - __main__ is the name of the top-level scope in which top-level code executes.
+
+        """
+    )
+
+    st.success(
+        '''
+        Note: The Python script file executing from the command prompt/terminal will be executed under the top-level scope __main__ scope. However, importing a module will be executed under the module's own scope. So, the top-level scope will be __main__, and the second scope would be module's scope.
+
+Thus, using the special variable __name__ and the top-level scope __main__ increases the reusability. The Python script file can be executed from the command prompt/termainal as an indipendent script as well as when imported as a module.
+
+        '''
+    )
 if page == "Reserve Words":
     st.header("Keywords in Python")
     st.info(

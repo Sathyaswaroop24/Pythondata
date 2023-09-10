@@ -8,5 +8,18 @@ import sys
  
 print(sys.argv[0])
 
-# Check lenght of empyt string
+print('Check lenght of empyt string')
 print(len(sys.argv))
+
+print('first ')
+print(sys.argv[1]) 
+
+
+
+def function_name():
+    return "Enter the New Dragon"
+
+print(function_name)
+
+
+print(function_name())
