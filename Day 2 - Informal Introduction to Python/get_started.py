@@ -5,8 +5,8 @@ from PIL import Image
 
 st.sidebar.title('Day 2: Getting Started :balloon:')
 
-image = Image.open("/Users/raahool/applications/github/pythontutor/static/pythonlogo.png")
-st.sidebar.image(image, caption='Welcome To Codelocked', width=150)
+#image = Image.open("/Users/raahool/applications/github/pythontutor/static/pythonlogo.png")
+#st.sidebar.image(image, caption='Welcome To Codelocked', width=150)
 st.sidebar.info("""
                 Today's Topic
                 - Summary Till now 

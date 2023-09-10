@@ -4,9 +4,10 @@ from PIL import Image
 
 
 st.sidebar.title(":balloon: Day 4 :balloon: Control Flow")
-
+'''
 image = Image.open("/Users/raahool/applications/github/pythontutor/static/pythonlogo.png")
 st.sidebar.image(image, width=150)
+'''
 st.sidebar.info("""
                 Today's Topic
                 - More Control Flow Tools

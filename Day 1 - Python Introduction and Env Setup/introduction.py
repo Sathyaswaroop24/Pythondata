@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
+'''
 image = Image.open("C:\\Users\\rahul\\Desktop\\Python\\pythontutor\\static\\pythonlogo.png")
 st.sidebar.image(image, caption='Python')
+'''
 st.sidebar.info("""
                 Today's Topic
                 - Python Introduction

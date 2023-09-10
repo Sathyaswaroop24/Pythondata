@@ -5,8 +5,10 @@ from PIL import Image
 
 st.sidebar.title(":balloon: Day 3 :balloon:  Let's Get Started")
 
+'''
 image = Image.open("/Users/raahool/applications/github/pythontutor/static/pythonlogo.png")
 st.sidebar.image(image, width=150)
+'''
 st.sidebar.info("""
                 Today's Topic
                 - Python Indentifiers and Reserve Words
