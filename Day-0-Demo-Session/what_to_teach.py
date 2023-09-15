@@ -5,10 +5,14 @@ import time
 st.title('Mistake Based Learning :sunglasses:')
 
 
-st.sidebar.title("CODELOCKED")
-st.sidebar.success("Day 0")
 
-st.text("")
+col1, col2 = st.sidebar.columns(2)
+
+with col1:
+    st.image("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2zXbuCACzfYCQqAXDxiKcWjiH3gojlltHtV7XN9D-dPhiP9M4YYnBo0exWeAYANa-U4IuW5-TGvAVkKz86c7DpweWcnROrDYNuK4AjIAlw2bguqUY5KwEj-Qmr0EvIRpihEfankorurHuleF7dtEuDxprJ9kSbvHOQ7ZlvVTbY-TS5H0KjEQ4EWi8FCU/s1600/pythonlogo.png",
+              width=100)
+with col2:
+    st.title(":balloon: Demo Session")
 
 
 tab1, tab2, tab3, tab4, tab5 = st.tabs(

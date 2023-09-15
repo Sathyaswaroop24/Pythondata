@@ -3,12 +3,16 @@ import pandas as pd
 from PIL import Image
 
 
-st.sidebar.title('Day 2: Getting Started :balloon:')
+col1, col2 = st.sidebar.columns(2)
 
-#image = Image.open("/Users/raahool/applications/github/pythontutor/static/pythonlogo.png")
-#st.sidebar.image(image, caption='Welcome To Codelocked', width=150)
+with col1:
+    st.image("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2zXbuCACzfYCQqAXDxiKcWjiH3gojlltHtV7XN9D-dPhiP9M4YYnBo0exWeAYANa-U4IuW5-TGvAVkKz86c7DpweWcnROrDYNuK4AjIAlw2bguqUY5KwEj-Qmr0EvIRpihEfankorurHuleF7dtEuDxprJ9kSbvHOQ7ZlvVTbY-TS5H0KjEQ4EWi8FCU/s1600/pythonlogo.png",
+              width=100)
+with col2:
+    st.title(":balloon: Getting Started")
+
 st.sidebar.info("""
-                Today's Topic
+                [Day 2] Today's Topic
                 - Summary Till now 
                 - Using the Python Interpreter
                 - An Informal Introduction to Python
